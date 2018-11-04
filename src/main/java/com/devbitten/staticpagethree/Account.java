@@ -2,8 +2,11 @@ package com.devbitten.staticpagethree;
 
 import org.springframework.data.annotation.Id;
 
-public class Account {
+import com.mongodb.DB;
 
+public class Account {
+	/*
+	final DB db = this.getDB();
     @Id
     public String userName;
 
@@ -17,15 +20,30 @@ public class Account {
 
     public Account() {}
 
-    public Account(String firstName, String lastName) {
+    public Account(String firstName, String lastName, String password,
+    		String numRatings, String avgRating, String review, String picture) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.password = password;
+        this.numRatings = numRatings;
+        this.avgRating = avgRating;
+        this.review = review;
+        this.picture = picture;
     }
-
+    
+    /*
+    public String getPassword(String userName) {
+    	db.command("SELECT password FROM ")
+		return password;
+    }
+    */
+	
+	/*
     @Override
     public String toString() {
         return String.format(
                 "Customer[id=%s, firstName='%s', lastName='%s']",
                 userName, firstName, lastName);
     }
+    */
 }
